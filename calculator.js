@@ -31,14 +31,14 @@ let employees = [
   },
 ];
 
-let totalAnnualSalary=0;
 function onReady() {
-  $("#addEmployee").on("click", calculateMonthly);
   $("document").ready(appendEmployees);
+  $("#addEmployee").on("click", addEmployee);
+  $("#addEmployee").on("click", calculateMonthly);
 }
 
 function addEmployee() {
-  //   calculateMonthly;
+  calculateMonthly;
   console.log(employees[3].firstName);
 }
 
@@ -60,11 +60,12 @@ function appendEmployees() {
 }
 
 function calculateMonthly() {
-    for (let employee of employees) {
-        totalAnnualSalary += Number(employee.salary);
-      };
-      let monthly = (totalAnnualSalary /12).toFixed(2);
-  $("#monthlySalary").append(`$${monthly}`);
+  let totalAnnualSalary = 0;
+  for (let employee of employees) {
+    totalAnnualSalary += Number(employee.salary);
+  }
+  let monthly = (totalAnnualSalary / 12).toFixed(2);
+  $("#monthlySalary").text(`$${monthly}`);
   if (monthly > 20000) {
     $("monthlySalary").addClass("overBudget");
   }
