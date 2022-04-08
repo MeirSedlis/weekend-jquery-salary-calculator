@@ -67,7 +67,7 @@ function calculateMonthly() {
   let monthly = (totalAnnualSalary / 12).toFixed(2);
   $("#monthlySalary").text(`$${monthly}`);
   if (monthly > 20000) {
-    $("monthlySalary").addClass("overBudget");
+    $("#monthlySalary").addClass("overBudget");
   }
   return monthly;
 }
