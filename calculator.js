@@ -35,14 +35,31 @@ function onReady() {
   $("document").ready(appendEmployees);
   $("#addEmployee").on("click", addEmployee);
   $("#addEmployee").on("click", calculateMonthly);
+  $("#addEmployee").on("click", appendEmployees);
 }
 
 function addEmployee() {
-  calculateMonthly;
-  console.log(employees[3].firstName);
+  if ($("#firstNameInput").val() === '') {
+    alert("Please populate the form to continue");
+    return;
+  }
+  let newEmployee = {
+    firstName: $("#firstNameInput").val(),
+    lastName: $("#lastNameInput").val(),
+    emplID: $("#emplIDInput").val(),
+    title: $("#titleInput").val(),
+    salary: $("#salaryInput").val(),
+  };
+  employees.push(newEmployee);
+  $("#firstNameInput").val("");
+  $("#lastNameInput").val("");
+  $("#emplIDInput").val("");
+  $("#titleInput").val("");
+  $("#salaryInput").val("");
 }
 
 function appendEmployees() {
+  $("#empList").empty();
   for (let employee of employees) {
     // use jQuery to append new employee data to the table
     // call this function within the addEmployee function
