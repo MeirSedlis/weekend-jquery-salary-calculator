@@ -1,9 +1,22 @@
+body{
+    max-width: 1000px;
+   
+}
 h1{
     color: navy;
 }
 
 table{
     table-layout: fixed;
-    width: 900px;
+margin-left: auto;
+margin-right: auto;
     outline: solid 1px black;
+}
+
+.form{
+   text-align: center;
+}
+
+.overBudget{
+    color: red;
 }
