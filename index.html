@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="jquery.js"></script>
     <script src="calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
   <body>
@@ -13,10 +14,10 @@
     <div class="form">
       <h3>Add Employee</h3>
       <input type="text" placeholder="First Name" id="firstName" />
-      <input type="text" placeholder="Last Name" id="lastName" />
+      <input type="text" placeholder="Last Name" id="lastNameInput" />
       <input type="number" placeholder="ID" id="emplID" />
-      <input type="text" placeholder="Title" id="title" />
-      <input type="number" placeholder="Annual Salary" id="salary" />
+      <input type="text" placeholder="Title" id="titleInput" />
+      <input type="number" placeholder="Annual Salary" id="salaryInput" />
       <button id="addEmployee">Submit</button>
     </div>
     <h2>Current Employees</h2>
@@ -31,8 +32,9 @@
             <th></th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody id="empList"></tbody>
       <tfoot></tfoot>
     </table>
+    <h3>Total Monthly Salary:<span id="monthlySalary"></span></h3>
   </body>
 </html>
