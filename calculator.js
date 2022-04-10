@@ -36,10 +36,11 @@ function onReady() {
   $("#addEmployee").on("click", addEmployee);
   $("#addEmployee").on("click", calculateMonthly);
   $("#addEmployee").on("click", appendEmployees);
+  $(document).on("click", '.deleteButton', deleteEmployee)
 }
 
 function addEmployee() {
-  if ($("#firstNameInput").val() === '') {
+  if ($("#firstNameInput").val() === "") {
     alert("Please populate the form to continue");
     return;
   }
@@ -70,7 +71,7 @@ function appendEmployees() {
         <td>${employee.emplID}</td>
         <td>${employee.title}</td>
         <td>${employee.salary}</td>
-        <td><button>Delete</button></td>
+        <td><button class="deleteButton">Delete</button></td>
     </tr>
     `);
   }
@@ -87,4 +88,9 @@ function calculateMonthly() {
     $("#monthlySalary").addClass("overBudget");
   }
   return monthly;
+}
+
+function deleteEmployee() {
+    
+  $(this).closest('tr').remove();
 }
