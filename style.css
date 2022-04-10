@@ -1,22 +1,35 @@
-body{
-    max-width: 1000px;
-   
+body {
+  margin: 0;
+  background-color: #fffde4;
 }
-h1{
-    color: navy;
+main {
+  display: flex;
 }
-
-table{
-    table-layout: fixed;
-margin-left: auto;
-margin-right: auto;
-    outline: solid 1px black;
-}
-
-.form{
-   text-align: center;
+h1 {
+  color: hotpink;
+  background: linear-gradient(90deg, #005aa7 0%, #fffde4 100%);
+  font-family: Luminari, Blippo, fantasy;
+  font-size: 46px;
+  padding: 40px 50px;
 }
 
-.overBudget{
-    color: red;
+table {
+  display: flexbox;
+  table-layout: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  outline: solid 1px black;
+  background-color: transparent;
+}
+
+.form {
+  text-align: center;
+  width: 200px;
+  display: flexbox;
+  background-color: transparent;
+  color: #764ba2;
+}
+
+.overBudget {
+  color: red;
 }

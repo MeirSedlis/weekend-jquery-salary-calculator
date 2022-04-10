@@ -6,7 +6,7 @@ let employees = [
     lastName: "Bonnet",
     emplID: "1234",
     title: "Co-Captain",
-    salary: 90000,
+    salary: 0,
   },
   {
     firstName: "Roach",
@@ -18,7 +18,7 @@ let employees = [
   {
     firstName: "Black",
     lastName: "Pete",
-    emplID: "1234",
+    emplID: "1910",
     title: "Crewmate",
     salary: 45000,
   },
@@ -91,6 +91,5 @@ function calculateMonthly() {
 }
 
 function deleteEmployee() {
-    
   $(this).closest('tr').remove();
 }
