@@ -4,6 +4,8 @@ body {
 }
 main {
   display: flex;
+  color: navy;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 h1 {
   color: hotpink;
@@ -14,11 +16,10 @@ h1 {
 }
 
 table {
-  display: flexbox;
   table-layout: fixed;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
-  outline: solid 1px black;
   background-color: transparent;
 }
 
@@ -27,9 +28,41 @@ table {
   width: 200px;
   display: flexbox;
   background-color: transparent;
-  color: #764ba2;
 }
 
 .overBudget {
   color: red;
 }
+
+.currentEmployees{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.totalMonthly{
+  padding: 10px 0 0 20px;
+} 
+
+tbody tr:nth-child(odd) {
+    background-color: #eff3e0;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f8e2;
+  }
+
+  thead{
+      background-color: #a5bfcd;
+  }
+
+  .prettyButton{
+      border: none;
+      background-color: #508dbb;
+      text-align: center;
+      display: inline-block;
+      opacity: 0.7
+  }
+
+  .monthlySalary{
+      outline: auto;
+  }

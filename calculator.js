@@ -71,7 +71,7 @@ function appendEmployees() {
         <td>${employee.emplID}</td>
         <td>${employee.title}</td>
         <td>${employee.salary}</td>
-        <td><button class="deleteButton">Delete</button></td>
+        <td><button class="prettyButton" class="deleteButton">Delete</button></td>
     </tr>
     `);
   }
@@ -86,6 +86,7 @@ function calculateMonthly() {
   $("#monthlySalary").text(`$${monthly}`);
   if (monthly > 20000) {
     $("#monthlySalary").addClass("overBudget");
+    alert("You're over budget!")
   }
   return monthly;
 }
