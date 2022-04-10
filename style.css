@@ -66,3 +66,10 @@ tbody tr:nth-child(odd) {
   .monthlySalary{
       outline: auto;
   }
+
+  footer{
+    font-size: 10px;
+    color: navy;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+  }
