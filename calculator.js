@@ -34,8 +34,6 @@ let employees = [
 function onReady() {
   $("document").ready(appendEmployees);
   $("#addEmployee").on("click", addEmployee);
-  $("#addEmployee").on("click", calculateMonthly);
-  $("#addEmployee").on("click", appendEmployees);
   $(document).on("click", ".deleteButton", deleteEmployee);
 }
 
@@ -57,6 +55,8 @@ function addEmployee() {
   $("#emplIDInput").val("");
   $("#titleInput").val("");
   $("#salaryInput").val("");
+  appendEmployees();
+  calculateMonthly();
 }
 
 function appendEmployees() {
