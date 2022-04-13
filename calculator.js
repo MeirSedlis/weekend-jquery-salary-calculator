@@ -36,7 +36,7 @@ function onReady() {
   $("#addEmployee").on("click", addEmployee);
   $("#addEmployee").on("click", calculateMonthly);
   $("#addEmployee").on("click", appendEmployees);
-  $(document).on("click", '.deleteButton', deleteEmployee)
+  $(document).on("click", ".deleteButton", deleteEmployee);
 }
 
 function addEmployee() {
@@ -66,12 +66,12 @@ function appendEmployees() {
     // call this function within the addEmployee function
     $("#empList").append(`
     <tr>
-        <td>${employee.firstName}</td>
-        <td>${employee.lastName}</td>
-        <td>${employee.emplID}</td>
-        <td>${employee.title}</td>
-        <td>${employee.salary}</td>
-        <td><button class="prettyButton" class="deleteButton">Delete</button></td>
+      <td>${employee.firstName}</td>
+      <td>${employee.lastName}</td>
+      <td>${employee.emplID}</td>
+      <td>${employee.title}</td>
+      <td>${employee.salary}</td>
+      <td><button class="prettyButton deleteButton">Delete</button></td>
     </tr>
     `);
   }
@@ -86,11 +86,11 @@ function calculateMonthly() {
   $("#monthlySalary").text(`$${monthly}`);
   if (monthly > 20000) {
     $("#monthlySalary").addClass("overBudget");
-    alert("You're over budget!")
+    alert("You're over budget!");
   }
   return monthly;
 }
 
 function deleteEmployee() {
-  $(this).closest('tr').remove();
+  $(this).closest("tr").remove();
 }
