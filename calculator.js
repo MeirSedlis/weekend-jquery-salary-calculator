@@ -50,11 +50,7 @@ function addEmployee() {
     salary: $("#salaryInput").val(),
   };
   employees.push(newEmployee);
-  $("#firstNameInput").val("");
-  $("#lastNameInput").val("");
-  $("#emplIDInput").val("");
-  $("#titleInput").val("");
-  $("#salaryInput").val("");
+  $("input").val("");
   appendEmployees();
   calculateMonthly();
 }
